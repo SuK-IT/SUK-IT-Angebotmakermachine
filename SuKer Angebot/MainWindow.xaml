@@ -23,7 +23,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBlock HorizontalAlignment="Left" Margin="419,355,0,0" TextWrapping="Wrap" Text="Entwickelt von Hazel Baldenius, David Hengstmann, Dennis Fleitling, Kevin Kowalzki und Nico Funk." VerticalAlignment="Top" FontSize="8" FontFamily="Segoe UI Emoji" Foreground="#FFB8B8B8"/>
+        <TextBlock HorizontalAlignment="Left" Margin="419,355,0,0" TextWrapping="Wrap" Text="Entwickelt von Hazel Baldenius, David Hengstmann, Dennis Fleitling, Kevin Kowalski und Nico Funk." VerticalAlignment="Top" FontSize="8" FontFamily="Segoe UI Emoji" Foreground="#FFB8B8B8"/>
         <TextBlock HorizontalAlignment="Left" Margin="653,334,0,0" TextWrapping="Wrap" Text="© 2020 SUK IT GmbH" VerticalAlignment="Top"/>
 
     </Grid>
