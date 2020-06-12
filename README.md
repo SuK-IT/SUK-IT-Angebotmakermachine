@@ -1,7 +1,5 @@
 # SUK IT Angebotmakermachine
-Die SUK IT Angebotmakermachine ist ein Programm, dass die Einkaufs und Verkaufskalkulation vereinfacht. Nie wieder muss man mit Excel komplizierte Formen verwenden. Die Angebotmakermachine macht alles für dich!
-
-
+Die SUK IT Angebotmakermachine ist ein Programm, dass die Einkaufs und Verkaufskalkulation vereinfachen soll. Nie wieder musst du mit Excel komplizierte Formeln verwenden! Lad dir die Angebotmakermachine und lehn dich zurück! 
 
 # COPYRIGHT
 This source code is published and licensed under the GPLv3 licensing agreement.
