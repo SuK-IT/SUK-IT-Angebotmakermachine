@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuKer Angebot", "SuKer Angebot\SuKer Angebot.csproj", "{978E68AE-1308-4957-B517-B8E0BFB22710}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{978E68AE-1308-4957-B517-B8E0BFB22710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{978E68AE-1308-4957-B517-B8E0BFB22710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{978E68AE-1308-4957-B517-B8E0BFB22710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{978E68AE-1308-4957-B517-B8E0BFB22710}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E1FDF10-12BB-4421-BECC-55E5D403612B}
+	EndGlobalSection
+EndGlobal

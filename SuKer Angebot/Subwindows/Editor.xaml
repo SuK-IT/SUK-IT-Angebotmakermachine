@@ -1,0 +1,86 @@
+﻿<Window x:Class="SuKer_Angebot.Subwindows.Editor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SuKer_Angebot.Subwindows"
+        mc:Ignorable="d"
+        Title="SUK IT - Money and Positions Editormachine" Height="610" Width="855" ResizeMode="CanMinimize">
+    <Grid>
+
+        <TextBlock Name="currentPosition_Block" HorizontalAlignment="Left" Margin="10,114,0,0" TextWrapping="Wrap" Text="Ausgewählte Position: " VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        <Button Content="Übernehmen" HorizontalAlignment="Left" Margin="10,535,0,0" Width="75" Click="Button_Click" Loaded="Button_Loaded" Height="26" VerticalAlignment="Top"/>
+        <TextBlock x:Name="titlePosition_Block" HorizontalAlignment="Left" Margin="10,139,0,0" TextWrapping="Wrap" Text="Positions Titel: " VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        <TextBlock x:Name="descriptionPosition_Block" HorizontalAlignment="Left" Margin="10,164,0,0" TextWrapping="Wrap" Text="Positions Beschreibung:" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        <TextBox x:Name="titlePosition_Box" HorizontalAlignment="Left" Height="23" Margin="134,138,0,0" TextWrapping="Wrap" MaxLength="25" VerticalAlignment="Top" Width="285"/>
+        <TextBox x:Name="descriptionPosition_Box" MaxLines="20" AcceptsReturn="true" HorizontalAlignment="Left" Height="100" Margin="10,189,0,0" TextWrapping="Wrap" MaxLength="300" VerticalAlignment="Top" Width="409"/>
+
+        <Grid x:Name="purchaseCalculation_Grid" Width="409" Margin="10,294,0,49" HorizontalAlignment="Left">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0,0,0,0">
+                <Grid>
+                    <TextBlock Text="Einkaufskalkulation" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" Width="{Binding ActualWidth, ElementName=purchaseCalculation_Grid}" FontFamily="FreeUniversal" Background="#54000000" FontSize="16"/>
+                    <TextBlock HorizontalAlignment="Left" Height="16" Margin="10,25,0,0" TextWrapping="Wrap" Text="Einkaufspreis" VerticalAlignment="Top" Width="104"/>
+                    <TextBox Name="ek_Price" HorizontalAlignment="Left" Height="23" Margin="10,46,0,0" TextWrapping="Wrap" Text="0,00" VerticalAlignment="Top" Width="100"/>
+                    <CheckBox Name="ek_IsNet" IsChecked="False" Content="Netto" HorizontalAlignment="Left" Height="18" Margin="115,48,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="ek_Amount" HorizontalAlignment="Left" Height="23" Margin="10,95,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock HorizontalAlignment="Left" Height="16" Margin="10,74,0,0" TextWrapping="Wrap" Text="Menge" VerticalAlignment="Top" Width="104"/>
+                    <TextBox x:Name="ek_Discount" HorizontalAlignment="Left" Height="23" Margin="10,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock HorizontalAlignment="Left" Height="16" Margin="10,123,0,0" TextWrapping="Wrap" Text="Rabatt" VerticalAlignment="Top" Width="104"/>
+                    <CheckBox x:Name="ek_discountIsPercent" IsChecked="True" Content="Prozentual" HorizontalAlignment="Left" Height="18" Margin="115,146,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="ek_Scam" HorizontalAlignment="Left" Height="23" Margin="10,193,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock HorizontalAlignment="Left" Height="16" Margin="10,172,0,0" TextWrapping="Wrap" Text="Skonto" VerticalAlignment="Top" Width="104"/>
+                    <CheckBox x:Name="ek_scamIsPercent" IsChecked="True" Content="Prozentual" HorizontalAlignment="Left" Height="18" Margin="115,195,0,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Height="16" Margin="297,25,0,0" TextWrapping="Wrap" Text="Bezugskosten" VerticalAlignment="Top" Width="104"/>
+                    <TextBox x:Name="ek_Shipping" HorizontalAlignment="Left" Height="23" Margin="297,46,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="100"/>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid x:Name="salesNumbers_Grid" Width="409" Margin="425,10,0,397" HorizontalAlignment="Left">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0,0,0,0">
+                <Grid>
+                    <TextBlock Text="Preise" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" Width="{Binding ActualWidth, ElementName=salesNumbers_Grid}" FontFamily="FreeUniversal" Background="#54000000" FontSize="16"/>
+                    <TextBlock Name="p_Einzelbezugspreis" HorizontalAlignment="Left" Margin="10,45,0,0" TextWrapping="Wrap" Text="Einzelbezugspreis: " VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+                    <TextBlock Name="p_Bezugspreis" HorizontalAlignment="Left" Margin="10,25,0,0" TextWrapping="Wrap" Text="Bezugspreis:" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+                    <TextBlock Name="p_Verkaufspreis" HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="Verkaufspreis: " VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+                    <TextBlock Name="p_Einzelverkaufspreis"  HorizontalAlignment="Left" Margin="10,104,0,-26" TextWrapping="Wrap" Text="Einzelverkaufspreis: " VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+                    <TextBlock Name="p_EinzelverkaufspreisUSt" HorizontalAlignment="Left" Margin="10,124,0,-46" TextWrapping="Wrap" Text="Enthaltene USt.: " VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+                    <TextBlock Name="p_VerkaufspreisUSt" HorizontalAlignment="Left" Margin="10,84,0,-6" TextWrapping="Wrap" Text="Enthaltene USt.: " VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <Grid x:Name="taxCalculation_Grid" Width="409" Margin="424,189,0,292" HorizontalAlignment="Left">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0,0,0,0">
+                <Grid>
+                    <TextBlock Text="Steuersatz" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" Width="{Binding ActualWidth, ElementName=purchaseCalculation_Grid}" FontFamily="FreeUniversal" Background="#54000000" FontSize="16"/>
+                    <RadioButton Name="tax_Is19" IsChecked="True" Content="19%" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top"/>
+                    <RadioButton Name="tax_Is7" Content="7%" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+                    <RadioButton Name="tax_IsCustomRate" Content="Eigen" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Height="16" Margin="297,38,0,0" TextWrapping="Wrap" Text="Steuersatz" VerticalAlignment="Top" Width="104"/>
+                    <TextBox x:Name="tax_Rate" HorizontalAlignment="Left" Height="23" Margin="297,59,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="100"/>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid x:Name="salesCalculation_Grid" Width="409" Margin="425,294,0,49" HorizontalAlignment="Left">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0,0,0,0">
+                <Grid>
+                    <TextBlock Text="Verkaufskalkulation" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" Width="{Binding ActualWidth, ElementName=purchaseCalculation_Grid}" FontFamily="FreeUniversal" Background="#54000000" FontSize="16"/>
+                    <TextBox x:Name="vk_Discount" HorizontalAlignment="Left" Height="23" Margin="10,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock HorizontalAlignment="Left" Height="16" Margin="10,123,0,0" TextWrapping="Wrap" Text="Rabatt" VerticalAlignment="Top" Width="104"/>
+                    <CheckBox x:Name="vk_discountIsPercent" IsChecked="True" Content="Prozentual" HorizontalAlignment="Left" Height="18" Margin="115,146,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="vk_Scam" HorizontalAlignment="Left" Height="23" Margin="10,193,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock HorizontalAlignment="Left" Height="16" Margin="10,172,0,0" TextWrapping="Wrap" Text="Skonto" VerticalAlignment="Top" Width="104"/>
+                    <CheckBox x:Name="vk_scamIsPercent" IsChecked="True" Content="Prozentual" HorizontalAlignment="Left" Height="18" Margin="115,195,0,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Height="16" Margin="10,25,0,0" TextWrapping="Wrap" Text="Handelskosten" VerticalAlignment="Top" Width="104"/>
+                    <TextBox x:Name="vk_Selfcost" HorizontalAlignment="Left" Height="23" Margin="10,46,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="100"/>
+                    <CheckBox x:Name="vk_selfcostIsPercent" IsChecked="True" Content="Prozentual" HorizontalAlignment="Left" Height="18" Margin="115,48,0,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Height="16" Margin="10,74,0,0" TextWrapping="Wrap" Text="Gewinn" VerticalAlignment="Top" Width="104"/>
+                    <TextBox x:Name="vk_Win" HorizontalAlignment="Left" Height="23" Margin="10,95,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="100"/>
+                    <CheckBox x:Name="vk_winIsPercent" IsChecked="True" Content="Prozentual" HorizontalAlignment="Left" Height="18" Margin="115,97,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </Border>
+        </Grid>
+        <Image HorizontalAlignment="Left" Height="109.5" VerticalAlignment="Top" Width="325" Source="SUK-IT-LOGO.png"/>
+        <CheckBox IsChecked="true" Content="Auto Update" HorizontalAlignment="Left" Margin="745,534,0,0" VerticalAlignment="Top" Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked"/>
+    </Grid>
+</Window>
