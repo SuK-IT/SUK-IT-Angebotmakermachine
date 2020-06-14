@@ -5,5 +5,5 @@ Die SUK IT Angebotmakermachine ist ein Programm, dass die Einkaufs und Verkaufsk
 
 # COPYRIGHT
 This source code is published and licensed under the GPLv3 licensing agreement.
-The SUK IT school group reserves itself the right, to change the licensing agreement at anytime, and without further notice.
+The SUK IT school group reserves itself the right to change the licensing agreement at anytime, and without further notice.
 More information about the GPLv3 licensing agreement can be found here: https://github.com/SuK-IT/SUK-IT-Angebotmakermachine/blob/master/GPLv3.license
